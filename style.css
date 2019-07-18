@@ -96,6 +96,7 @@ code {
 em {
   font-variation-settings: "wght" 400, "wdth" 600, "slnt" 0;
   animation: em 2s ease-in 1 both;
+  font-style: normal;
 }
 @keyframes em {
   to {
@@ -278,4 +279,26 @@ label {
 
 .credit {
   font-size: 0.4rem;
+}
+
+@media print {
+  :root {
+    font-size: 24pt;
+  }
+  section {
+    display: inline-block;
+    position: relative;
+    color: #000;
+    background: none;
+    width: 100%;
+    max-width: 500pt;
+    height: 40vh;
+    max-height: 350pt;
+    page-break-inside: avoid;
+    border: 1pt solid #999;
+  }
+  article:before,
+  article:after {
+    display: none;
+  }
 }

@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Practical Responsive Typography</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <button class="fullscreen" onclick="toggleFullscreen()">
+        Fullscreen
+      </button>
+    </nav>
+    <article>
+      <section class="titlecard">
+        <div class="main">
+          <h1>
+            <span class="slnt">Practical</span
+            ><span class="slnt">Responsive</span
+            ><span class="slnt">Typography</span>
+          </h1>
+          <h2 class="byline">by Scott Kellum</h2>
+          <h2 class="date"></h2>
+        </div>
+        <style>
+          .titlecard h1 {
+            margin-top: 0.7rem;
+            margin-bottom: 0;
+            font-variation-settings: "wght" 700, "wdth" 400, "slnt" 10;
+          }
+          .titlecard h2 {
+            font-variation-settings: "wght" 300, "wdth" 500, "slnt" 10;
+            margin-left: 2rem;
+          }
+          .titlecard .slnt,
+          .titlecard h2 {
+            display: table;
+            position: relative;
+            transform: rotate(-9deg);
+            transform-origin: 0 50%;
+          }
+        </style>
+      </section>
+      <section class="titlecard">
+        <div class="main">
+          <h1>
+            <span class="slnt strike">Practical</span
+            ><span class="slnt strike strike2">Responsive</span
+            ><span class="slnt">Typography</span>
+          </h1>
+          <h2 class="byline">by Scott Kellum</h2>
+          <h2 class="date"></h2>
+        </div>
+        <style>
+          .titlecard .strike {
+            animation: strike 0.2s 1 ease-out both;
+          }
+          .titlecard .strike:before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: calc(100% + 0.5rem);
+            height: 0.2rem;
+            background-color: #fff;
+            top: 0.6rem;
+            transform: translatex(-0.25rem) skew(-10deg);
+            animation: strikeafter 0.2s 1 ease-out both;
+            box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.4);
+          }
+          .titlecard .strike2,
+          .titlecard .strike2:before {
+            animation-delay: 0.1s;
+          }
+          @keyframes strike {
+            100% {
+              color: rgba(255, 255, 255, 0.5);
+            }
+          }
+          @keyframes strikeafter {
+            0% {
+              opacity: 0;
+              transform: translatex(-100%) skew(-10deg);
+            }
+          }
+        </style>
+      </section>
+      <section>
+        <div class="main">
+          <p>
+            Words are how we communicate.
+          </p>
+          <p>Typography is <em>the voice we give to written words</em>.</p>
+        </div>
+      </section>
+      <section>
+        <div class="main">
+          <h1>Let’s Look At<br />Some Examples</h1>
+        </div>
+      </section>
+      <section>
+        <div class="fill">
+          <img src="img/hallmark.jpg" alt="An assortmant of hallmark cards" />
+        </div>
+      </section>
+      <section>
+        <div class="fill">
+          <img src="img/protest.jpg" alt="People holding protest signs" />
+        </div>
+      </section>
+      <section>
+        <div class="fill">
+          <img
+            src="img/newspaper.jpg"
+            alt="The Boston Globe’s front page in paper form"
+          />
+        </div>
+      </section>
+      <section>
+        <div class="fill">
+          <img src="img/airport.jpg" alt="Wayfinding at Amsterdam’s airport" />
+        </div>
+      </section>
+      <section>
+        <div class="main">
+          <p>
+            With typography,<br />you are looking for a <em>voice</em> that is
+            appropriate for its <em>context</em>.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="main">
+          <h1>Typography Has Utility</h1>
+        </div>
+      </section>
+      <section>
+        <div class="fill">
+          <img style="object-fit: contain" src="img/not-a-pipe.jpg" alt=" " />
+        </div>
+      </section>
+      <section>
+        <div class="main">
+          The utility of typography is&nbsp;<em>legibility</em>.
+        </div>
+      </section>
+      <section class="code">
+        <div class="main">
+          <pre><code>:root {
+  font-size: 120%;
+  line-height: 1.4;
+  font-family:
+    "Obviously Variable",
+    sans-serif;
+  font-variation-settings:
+    "wght" 300,
+    "wdth" 400,
+    "slnt" 0;
+}</code></pre>
+        </div>
+        <style>
+          .code code {
+            font-family: sans-serif;
+            font-size: 2.5vw;
+            line-height: 1.4;
+            display: block;
+          }
+          .code code:hover {
+            font-family: Consolas, "Andale Mono WT", "Andale Mono",
+              "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
+              "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L",
+              Monaco, "Courier New", Courier, monospace;
+          }
+        </style>
+      </section>
+      <section class="tabulardata">
+        <div class="main">
+          <table>
+            <tr>
+              <td>Net income</td>
+              <td>$3,283,483.28</td>
+            </tr>
+            <tr>
+              <td>Expenses</td>
+              <td>$1,317,181.11</td>
+            </tr>
+            <tr>
+              <td>Profit</td>
+              <td>$1,966,302.17</td>
+            </tr>
+          </table>
+        </div>
+        <style>
+          .tabulardata {
+            font-size: 3.5vw;
+            letter-spacing: 0.1em;
+            font-family: "Halyard Display";
+          }
+          .tabulardata table {
+            font-variant-numeric: lining-nums;
+          }
+          .tabulardata table:hover * {
+            font-variant-numeric: tabular-nums !important;
+          }
+          .tabulardata td {
+            padding: 0.1em 0.5em;
+            text-align: right;
+          }
+          .tabulardata td:first-child {
+            text-align: left;
+          }
+        </style>
+      </section>
+      <section class="bellcentennial">
+        <div class="fill" style="align-items: center; justify-content: center;">
+          <img
+            style="
+              object-fit: contain;
+              padding: 10vmin;
+              background-color: #fff;
+              transition: 2s ease filter;
+              max-width: 30vmin;
+              max-height: 30vmin;
+            "
+            src="img/bell-centennial.png"
+            alt="Bell Centennial"
+          />
+        </div>
+        <style>
+          .bellcentennial img:hover {
+            filter: blur(0.65vmin) brightness(0.6) contrast(30);
+          }
+        </style>
+      </section>
+      <section>
+        <div class="fill">
+          <img style="object-fit: contain" src="img/benton.jpg" alt=" " />
+        </div>
+      </section>
+      <section class="opticalsize">
+        <div class="fill">
+          <div>
+            <h1 class="small">
+              This exotic bird was just a seagull doused in curry
+            </h1>
+            <p class="large">
+              An exotic-looking bright orange bird was rescued after people saw
+              him on the side of a highway, but according to an animal hospital,
+              it was a seagull somehow covered in curry or turmeric, which
+              prevented him from flying properly.
+            </p>
+          </div>
+          <div>
+            <h1 class="large">
+              This exotic bird was just a seagull doused in curry
+            </h1>
+            <p class="small">
+              An exotic-looking bright orange bird was rescued after people saw
+              him on the side of a highway, but according to an animal hospital,
+              it was a seagull somehow covered in curry or turmeric, which
+              prevented him from flying properly.
+            </p>
+          </div>
+        </div>
+        <style>
+          section.opticalsize h1 {
+            font-size: 1rem;
+          }
+          section.opticalsize p {
+            font-size: 0.3rem;
+            line-height: 1.3;
+          }
+          section.opticalsize .large {
+            font-family: "FreightBig", serif;
+            font-weight: 700;
+          }
+          section.opticalsize .small {
+            font-family: "FreightMicro", serif;
+            font-weight: 300;
+          }
+          section.opticalsize div {
+            background-color: #fff;
+            color: #222;
+            padding: 0.2rem;
+          }
+        </style>
+      </section>
+      <section class="titlecard titlecard3">
+        <div class="main">
+          <h1>
+            <span class="slnt strike">Practical</span
+            ><span class="slnt strike strike2">Responsive</span
+            ><span class="slnt">Typography</span>
+          </h1>
+          <h2 class="byline">by Scott Kellum</h2>
+          <h2 class="date"></h2>
+        </div>
+        <style>
+          .titlecard3 .strike {
+            animation: strike2 0.2s 1 ease-out both;
+            animation-delay: 1s;
+          }
+          .titlecard3 .strike:before {
+            animation: strikeafter2 0.2s 1 ease-out both;
+            animation-delay: 1s;
+          }
+          .titlecard3 .strike2,
+          .titlecard3 .strike2:before {
+            animation-delay: 1.1s;
+          }
+          @keyframes strike2 {
+            0% {
+              color: rgba(255, 255, 255, 0.5);
+            }
+          }
+          @keyframes strikeafter2 {
+            100% {
+              opacity: 0;
+              transform: translatex(100%) skew(-10deg);
+            }
+          }
+        </style>
+      </section>
+      <section class="live-variable">
+        <div class="fill">
+          <div
+            class="output"
+            contenteditable
+            style="align-self:center;text-align: center"
+            id="vfexample"
+          >
+            Hello WordCamp!
+          </div>
+          <div class="input" style="flex: .5;align-self:center">
+            <form id="vfform">
+              <label for="wght">
+                <span class="label">wght</span>
+                <input type="range" min="100" max="800" value="500" />
+              </label>
+              <label for="wdth">
+                <span class="label">wdth</span>
+                <input type="range" min="100" max="800" value="500" />
+              </label>
+              <label for="slnt">
+                <span class="label">slnt</span>
+                <input type="range" min="0" max="10" step=".01" value="0" />
+              </label>
+            </form>
+            <style class="visible"></style>
+          </div>
+          <script>
+            const vfform = document.getElementById("vfform");
+            const vfexample = document.getElementById("vfexample");
+            const vfinputs = document.querySelectorAll("#vfform input");
+
+            vfform.addEventListener("input", vfupdate);
+
+            function vfupdate() {
+              console.log(
+                `'wght' ${vfinputs[0].value}, 'wdth' ${
+                  vfinputs[1].value
+                }, 'slnt' ${vfinputs[2].value}`
+              );
+              vfexample.style.fontVariationSettings = `'wght' ${
+                vfinputs[0].value
+              }, 'wdth' ${vfinputs[1].value}, 'slnt' ${vfinputs[2].value}`;
+            }
+            vfupdate();
+          </script>
+          <style>
+            .live-variable .label {
+              display: block;
+            }
+            .live-variable input {
+              width: 100%;
+            }
+          </style>
+        </div>
+      </section>
+      <section>
+        <div class="fill">
+          <img style="object-fit: contain" src="img/djr-slide.png" alt="" />
+        </div>
+      </section>
+      <section>
+        <div class="fill">
+          <video
+            controls="false"
+            autoplay="true"
+            loop="true"
+            muted="true"
+            src="img/grain-of-the-web.mov"
+          ></video>
+        </div>
+      </section>
+      <section>
+        <div class="main">
+          <h1>Responsive Typography</h1>
+          <ul>
+            <li>Balance font size and line length</li>
+            <li>As line length grows, so should line&nbsp;height</li>
+            <li>Have a consistent type scale</li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <div class="main">
+          <p>
+            “Anything from 45 to 75 characters is widely regarded as a
+            satisfactory length of line for a single-column page set in a
+            serifed text face in a text size.”
+          </p>
+          <p class="credit">
+            — Robert Bringhurst, The Elements of Typographic Style
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="fill">
+          <img style="object-fit: contain" src="img/wikipedia.png" alt="" />
+        </div>
+      </section>
+      <section>
+        <div class="main">
+          <pre><code>max-width: 60ch;</code></pre>
+        </div>
+      </section>
+      <section>
+        <div class="main">
+          <h1>Font Size</h1>
+        </div>
+      </section>
+      <section>
+        <div class="main">
+          <h1>Line Height</h1>
+        </div>
+      </section>
+      <section>
+        <div class="main">
+          <h1>Typographic Hierarchy</h1>
+        </div>
+      </section>
+      <section>
+        <div class="main">
+          <h1>Tools for responsive&nbsp;typography</h1>
+          <ul>
+            <li>Media Queries</li>
+            <li>CSS Locks</li>
+            <li>Typetura.js</li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <div class="fill">
+          <video
+            controls="false"
+            autoplay="true"
+            loop="true"
+            muted="true"
+            src="img/outline-mq.mov"
+          ></video>
+        </div>
+      </section>
+      <section>
+        <div class="main">
+          <h1>CSS Locks</h1>
+        </div>
+      </section>
+      <section>
+        <div class="main">
+          <code style="font-size: 3.5vw;"
+            ><pre>
+calc(
+  12px + (24 - 12) *
+  (
+    (100vw - 400px) /
+    (800 - 400)
+  )
+)</pre
+            ></code
+          >
+        </div>
+      </section>
+      <section>
+        <div class="main">
+          <code style="font-size: 3.5vw;">font-size: calc(12px + 3vw);</code>
+        </div>
+      </section>
+      <section>
+        <div class="main">
+          <code style="font-size: 3.5vw;"
+            ><pre>
+calc(
+  12px
+)</pre
+            ></code
+          >
+        </div>
+      </section>
+      <section>
+        <div class="main">
+          <code style="font-size: 3.5vw;"
+            ><pre>
+calc(
+  12px + (24 - 12)
+)</pre
+            ></code
+          >
+        </div>
+      </section>
+      <section>
+        <div class="main">
+          <code style="font-size: 3.5vw;"
+            ><pre>
+calc(
+  12px + (24 - 12) *
+  (
+    100vw
+  )
+)</pre
+            ></code
+          >
+        </div>
+      </section>
+      <section>
+        <div class="main">
+          <code style="font-size: 3.5vw;"
+            ><pre>
+calc(
+  12px + (24 - 12) *
+  (
+    (100vw - 400px) /
+    (800 - 400)
+  )
+)</pre
+            ></code
+          >
+        </div>
+      </section>
+      <section>
+        <div class="main">
+          <code style="font-size: 3.5vw;">clamp(12px, 3vw, 24px)</code>
+        </div>
+      </section>
+      <section>
+        <code
+          style="text-align: center; line-height:80vh;font-size:35vw; font-weight: bold; text-shadow: 0 1vw 8vw rgba(0,0,0,.4)"
+          >vw</code
+        >
+      </section>
+      <section>
+        <div class="main">
+          <h1>Typetura.js</h1>
+        </div>
+      </section>
+      <section>
+        <div class="main">
+          Typetura.js maps<br />CSS Keyframes<br />to element width
+        </div>
+      </section>
+      <section>
+        <div class="main">
+          <h1>Thank you</h1>
+          <ul>
+            <li>WordPress and WordCamp</li>
+            <li>OH no Type Company</li>
+            <li>Sal Hernandez</li>
+            <li>Ana Monroe</li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <div class="main">
+          <ul>
+            <li><a href="https://typetura.com/">Typetura</a></li>
+            <li><a href="https://www.modularscale.com/">Modular Scale</a></li>
+            <li>
+              <a
+                href="https://blog.typekit.com/2016/08/17/flexible-typography-with-css-locks/"
+                >CSS Locks</a
+              >
+            </li>
+            <li><a href="https://rwt.io/">Responsive Web Type</a></li>
+            <li>
+              <a href="https://variablefonts.dev/"
+                >Variable Fonts for Developers</a
+              >
+            </li>
+            <li><a href="https://textblock.io/">Textblock</a></li>
+            <li><a href="https://v-fonts.com/">V-fonts.com</a></li>
+          </ul>
+        </div>
+      </section>
+    </article>
+    <script src="script.js"></script>
+  </body>
+</html>

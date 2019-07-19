@@ -302,3 +302,14 @@ label {
     display: none;
   }
 }
+
+.browser {
+  position: absolute;
+  top: 10vmin;
+  bottom: 10vmin;
+  left: 10vmin;
+  right: 10vmin;
+  overflow: auto;
+  border-radius: 1px;
+  box-shadow: 0 0 0 0.5vmin #ddd;
+}

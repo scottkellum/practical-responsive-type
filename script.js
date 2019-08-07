@@ -42,9 +42,9 @@ if (wayKeys) {
   document.addEventListener(
     "keyup",
     e => {
-      if (e.key === "ArrowLeft" || e.key === "ArrowUp" || e.key === "Space" || e.key === "space") {
+      if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
         prev();
-      } else if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+      } else if (e.key === "ArrowRight" || e.key === "ArrowDown" || e.keyCode === "39" || e.keyCode === "32") {
         next();
       }
     },

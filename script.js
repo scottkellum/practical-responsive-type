@@ -42,7 +42,7 @@ if (wayKeys) {
   document.addEventListener(
     "keyup",
     e => {
-      if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+      if (e.key === "ArrowLeft" || e.key === "ArrowUp" || e.key === "Space" || e.key === "space") {
         prev();
       } else if (e.key === "ArrowRight" || e.key === "ArrowDown") {
         next();
